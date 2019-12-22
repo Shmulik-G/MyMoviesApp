@@ -1,115 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" >
 
-    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:id="@+id/details_iv_back"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/back_image_size"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/infinity_war_background"
+        tools:ignore="contentDescription" />
+
+    <ImageView
+        android:id="@+id/details_iv_image"
+        android:layout_width="116dp"
+        android:layout_height="175dp"
+        android:layout_below="@+id/details_iv_back"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/text_title_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/infinity_war_image"
+        tools:ignore="contentDescription" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        tools:context=".DetailsActivity">
+        android:layout_alignTop="@id/details_iv_image"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_toEndOf="@id/details_iv_image"
+        android:orientation="vertical" >
 
-        <ImageView
-            android:id="@+id/details_iv_back"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/back_image_size"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/infinity_war_background"
-            tools:ignore="contentDescription" />
-
-        <ImageView
-            android:id="@+id/details_iv_image"
-            android:layout_width="116dp"
-            android:layout_height="175dp"
-            android:layout_below="@+id/details_iv_back"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="centerCrop"
-            tools:ignore="contentDescription"
-            android:src="@drawable/infinity_war_image" />
+        <TextView
+            android:id="@+id/details_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/infinity_war_title"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/text_title_size"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/details_iv_image"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/details_iv_image"
-            android:orientation="vertical">
+            android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/details_tv_title"
+                android:id="@+id/details_tv_released"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_s"
                 android:gravity="start"
-                android:text="@string/infinity_war_title"
-                android:textColor="@color/purple"
+                android:text="@string/released"
+                android:textColor="@color/black"
                 android:textSize="@dimen/text_title_size"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/details_tv_released_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginStart="@dimen/spacing_m"
+                android:layout_marginTop="@dimen/spacing_s"
+                android:gravity="start"
+                android:text="@string/infinity_war_release_date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_size"
+                tools:text="@string/infinity_war_release_date" />
 
-                <TextView
-                    android:id="@+id/details_tv_released"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="start"
-                    android:text="@string/released"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_title_size"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/details_tv_released_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:gravity="start"
-                    android:text="@string/infinity_war_release_date"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_title_size"
-                    tools:text="2018-01-01" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/details_btn_trailer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/movie_trailer" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/details_tv_overview"
+        <Button
+            android:id="@+id/details_btn_trailer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/details_iv_image"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="start"
-            android:text="@string/overview"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_title_size"
-            android:textStyle="bold" />
+            android:layout_marginStart="@dimen/spacing_s"
+            android:layout_marginTop="@dimen/text_title_size"
+            android:text="@string/movie_trailer" />
 
-        <TextView
-            android:id="@+id/details_tv_overview_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/details_tv_overview"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="start"
-            android:text="@string/infinity_war_overview"
-            android:textColor="@color/grey"
-            android:textSize="14sp" />
+    </LinearLayout>
 
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/details_tv_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_m"
+        android:gravity="start"
+        android:text="@string/overview"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title_size"
+        android:textStyle="bold"
+        android:layout_below="@id/details_iv_image" />
+
+    <TextView
+        android:id="@+id/details_tv_released_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_m"
+        android:layout_marginStart="@dimen/spacing_m"
+        android:layout_marginTop="@dimen/spacing_s"
+        android:gravity="start"
+        android:text="@string/details_tv_overview"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:layout_below="@id/details_tv_overview" />
+
+</RelativeLayout>
 </ScrollView>
