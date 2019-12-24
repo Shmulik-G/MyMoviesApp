@@ -1,7 +1,7 @@
 <resources>
 	<string name="app_name">AcademyTlvMovies</string>
 
-	<string name="title">Android Academy Fundamentals Course 2019</string>
+	<!-- <string name="title">Android Academy Fundamentals Course 2019</string> -->
 
 	<string name="released">Released:</string>
 	<string name="infinity_war_title">Avengers: Infinity War</string>

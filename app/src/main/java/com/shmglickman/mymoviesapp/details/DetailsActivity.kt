@@ -1,9 +1,10 @@
-package com.shmglickman.mymoviesapp
+package com.shmglickman.mymoviesapp.details
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.shmglickman.mymoviesapp.R
 import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {
